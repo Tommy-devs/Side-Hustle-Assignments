@@ -1,0 +1,10 @@
+DIFFERENCE BETWEEN COOKIES AND SESSIONS
+Session can store any type of data because the value is of data type of “object”. They are stored at server side which are secured because it is stored in binary format/encrypted form and gets decrypted at server.
+Session is independent for every client i.e. individual for every client, and there is no limitation on the size or number of sessions to be used in an application.
+Though they can be a burden or an overhead on server. they can be used without cookies
+Sessions are called as Non-Persistent cookies because its life time can be set manually
+while
+Cookies can store only “string” datatype and are stored at client side.
+3. Cookie is non-secure since stored in text-format at client side, also they may or may not be individual for every client.
+5. Size of cookie is limited to 40 and number of cookies to be used is restricted to 20.
+6. Cookies can be disabled. We have persistent and non-persistent cookies.
