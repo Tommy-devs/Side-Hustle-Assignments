@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple Calculator</title>
+</head>
+<body>
+	<form>
+		<input type="number" name="num1" placeholder="First number">
+		<input type="number" name="num2" placeholder="Second number">
+		<select name = "operator">
+			<option>None</option>
+			<option>Add</option>
+			<option>Subtract</option>
+			<option>Multiply</option>
+			<option>Divide</option>
+		</select> 
+		<br>
+		<br>
+		<button type="submit" name="submit">Calculate</button>
+		<br>
+		<br>
+		<button type="reset" name="reset" value="reset">clear</button>
+		<br>
+
+	
+
+	</form>
+
+	<?php
+
+		if (isset($_GET['submit'])){
+			$result1 = $_GET['num1'];
+			$result2 = $_GET['num2'];
+			$operator = $_GET['operator'];
+			switch ($operator) {
+				case 'None':
+					echo "You need to select a method";
+					break;
+					break;
+				case 'Add':
+					$t = $result1 + $result2;
+					break;
+					break;
+				case 'Subtract':
+					$t = $result1 - $result2;
+					break;
+					break;
+				case 'Multiply':
+					$t = $result1 * $result2;
+					break;
+					break;
+				case 'Divide':
+					$t = $result1 / $result2;
+					break;
+					break;
+					
+
+				}
+			}
+		
+		?>
+		
+		<p>The answer is:<b><?php echo $t ?></b></p>
+
+
+		
+</form>
+</body>
+</html>
