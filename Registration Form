@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+</head>
+<body>
+	<FIELDSET><LEGEND>REGISTRATION</LEGEND>
+
+	<form name="register" autocomplete="Off">
+
+		<p>First Name: <input type="text" name="Name1"></p>
+
+		<p>Last Name: <input type="text" name="Name2"></p>
+
+		<p>Age: <input type="Number" name="Age"></p>
+
+		<p>Email address: <input type="Email" name="Email"></p>
+
+		<p>Gender: <select name="Gender">
+			<option>Male</option>
+			<option>Female</option>
+		</select></p>
+		
+		<p><input type="submit" name="Submit" value="SUBMIT"></p>
+		<p></p>
+		<p><b><U><CENTER>REGISTRATION DETAILS</CENTER></U></b></p>
+
+	</form>
+
+	<?php
+
+		if (isset($_GET["Submit"])) {
+			$FirstName = $_GET['Name1'];
+			echo "First Name: ". $FirstName. "<br/>";
+
+			$LastName = $_GET['Name2'];
+			echo "Last Name: ". $LastName. "<br/>";
+
+			$Age = $_GET['Age'];
+			echo "Age: ". $Age. "<br/>";
+
+			$Email = $_GET['Email'];
+			echo "Email: ". $Email. '<br/>';
+
+			$Gender = $_GET['Gender'];
+				switch ($Gender) {
+					case 'Male':
+						echo "Gender: Male";
+						break;
+
+					case 'Female':
+						echo "Gender: Female";
+						break;
+				}
+
+
+		}
+
+
+	?>
+	</FIELDSET>
+	
+</body>
+</html>
